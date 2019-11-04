@@ -1,10 +1,15 @@
+import { Matrix } from './Matrix.js'
+import { Dot } from './Dot.js'
+
 export class Vector {
 	constructor(...args){
-		if (args.length===1 && args[0] instanceof Array) {
+
+		if (args.length===1 && args[0] instanceof Array) 
 			this.params = args[0]
-		}else{
-			this.params = args;
-		}
+		else if (args.length===1 && args[0] instanceof Dot) 
+			this.params = args[0].params
+		else this.params = args;
+
 	}
 
 	plus(vector){
@@ -84,4 +89,17 @@ export class Vector {
 	reverse(){
 		return new Vector(this.params.map((item) => -1 * item))
 	}
+	r(){ return this.reverse() }
+
+	copy(){ return new Vector(this.params.slice(0)) }
+
+
+
+
+
+	toMatrix(){ return new Matrix([this]) }
+	tm(){ return this.toMatrix() }
+
+	toDot() { return new Dot(this) }
+	td() { return this.toDot() }
 }

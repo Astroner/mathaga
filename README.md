@@ -60,4 +60,20 @@ Vector is basic element of linear algebra.
 
 	//get reversed vector
 	result = vec.reverse()
+	// or
+	result = vec.r()
+
+	//get copy of the vector
+	result = vec.copy()
+
+
+	//transform vector to a matrix
+	result = vec.toMatrix()
+	// or
+	result = vec.tm()
+
+	//transform the vector to a dot pushed off the center
+	result = vec.toDot()
+	// or 
+	result = vec.td()
 ``` 
