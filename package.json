@@ -1,0 +1,22 @@
+{
+  "name": "mathaga",
+  "version": "0.0.4",
+  "description": "JS module for linear algebra.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "start": "nodemon --exec babel-node start.js"
+  },
+  "keywords": ["linear algebra", "math"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "babel-preset-minify": "^0.5.1",
+    "nodemon": "^1.19.4"
+  }
+}
