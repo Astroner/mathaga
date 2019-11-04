@@ -1,11 +1,15 @@
 {
   "name": "mathaga",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "JS module for linear algebra.",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
     "start": "nodemon --exec babel-node start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Astroner/mathaga.git"
   },
   "keywords": ["linear algebra", "math"],
   "author": "",
