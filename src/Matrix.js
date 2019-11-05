@@ -1,4 +1,5 @@
-import { Vector, Dot } from './Vector.js';
+import { Vector } from './Vector.js';
+import { Dot } from './Dot.js'
 
 export class Matrix {
 	constructor(inits){
@@ -9,7 +10,7 @@ export class Matrix {
 
 			if (item instanceof Vector) opt = item.params.slice(0)
 			else if (item instanceof Array) opt = item
-			else if (item.constructor.name === "Dot") opt = item.params.slice(0)
+			else if (item instanceof Dot) opt = item.params.slice(0)
 
 			if (opt.length > maxLength) maxLength = opt.length
 

@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
-    "start": "nodemon --exec babel-node start.js"
+    "start": "cd ../ && subl mathaga/ && cd ./mathaga/ && nodemon --exec babel-node start.js",
+    "add": "git add . && git commit",
+    "push-m": "npm run add && git push origin master"
   },
   "repository": {
     "type": "git",
