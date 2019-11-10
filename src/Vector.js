@@ -123,7 +123,35 @@ export class Vector {
 
 	copy(){ return new Vector(this.params.slice(0)) }
 
+	vect(arg){
+		if (this.params.length > 3) {
+			console.error('vector product can be applied only to 3d(<) vectors')
+			return this
+		}
+		let vec = [];
+		let vec2 = this.params;
+		if (arg instanceof Vector) vec = arg.params;
+		else if (arg instanceof Array) vec = arg;
 
+		if (vec.length > 3) {
+			console.error('vector product can be applied only to 3d(<) vectors')
+			return this
+		}
+		if (vec.length < 3) {
+			vec = vec.concat(new Array(3 - vec.length).fill(0))
+		}
+
+		if (vec2.length < 3) {
+			vec2 = vec2.concat(new Array(3 - vec2.length).fill(0))
+		}
+
+		return new Vector(
+			vec[1] * vec2[2] - vec2[1] * vec[2],
+			vec2[0] * vec[2] - vec[0] * vec2[2],
+			vec[0] * vec2[2] - vec2[0] * vec[1]
+		)
+
+	}
 
 
 

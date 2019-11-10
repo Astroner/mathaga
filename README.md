@@ -66,6 +66,8 @@ Vector is basic element of linear algebra.
 	//get copy of the vector
 	result = vec.copy()
 
+	//get vector product
+	result = vec.vect(vec2)
 
 	//transform vector to a matrix
 	result = vec.toMatrix()
